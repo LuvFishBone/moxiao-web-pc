@@ -1,0 +1,194 @@
+@import "./base.less";
+.solution-page{
+    .banner{
+        .item{
+            img{
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+    .solutions{
+        // .pdrd(80, 0);
+        .pdt(80);
+        .content{
+            .pdt(40);
+            .flexbox();
+            .left{
+                .flex(1);
+                .h(360);
+                .bg('/images/solutions/solution-bg.png', cover);
+            }
+            .right{
+                .flex(1);
+                .flexbox();
+                .flex-direction-vertical();
+                .align-items-wd(start);
+                .flex-justify-wd(center);
+                p{
+                    .w(480);
+                    .h(84);
+                    .lh(30);
+                    .pdl(68);
+                    .fs(18);
+                    color: #161616;
+                    &:last-child{
+                        .mgt(20);
+                    }
+                }
+            }
+        }
+    }
+
+    .operations{
+        .pdrd(80, 0);
+        .products-dess{
+            .pdt(40);
+            li{
+                .flexbox();
+                .item{
+                    // .w(600);
+                    // .h(320);
+                    .flex(1);
+                    text-align: center;
+                    img{
+                        width: 100%;
+                    }
+                    .title{
+                        .pdb(25);
+                        .fs(28);
+                        font-weight:400;
+                    }
+                    .line{
+                        .flexbox();
+                        .flex-justify-wd(center);
+                        width: 100%;
+                        height: 1px;
+                        span{
+                            display: inline-block;
+                            .w(60);
+                            height:0;
+                            border:1px solid rgba(112,112,112,1);
+                        }
+                    }
+                    .text{
+                        .mgt(20);
+                        .mgb(30);
+                        .fs(18);
+                        font-weight:400;
+                        color:rgba(96,96,96,1);
+                    }
+                    .link{
+                        display: inline-block;
+                        .pdrd(9, 27);
+                        border:1px solid rgba(181,181,181,1);
+                        border-radius:10px;
+                        .fs(12);
+                        color:rgba(96,96,96,1);
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .desc{
+                    .pdt(60);
+                    .pdb(94);
+                    text-align: center;
+                    background:rgba(245,245,245,1);
+                }
+            }
+            .product-1{
+                .img{
+                    .bg('/images/solutions/operator-1.png', cover);
+                }
+            }
+            .product-2{
+                .img{
+                    .bg('/images/solutions/operator-2.png', cover);
+                }
+            }
+        }
+    }
+
+    .partners{
+        .pdb(80);
+        .content{
+            .pdt(40);
+            ul{
+                li{
+                    .flexbox();
+                    .flex-justify-wd(space-between);
+                    .item{
+                        position: relative;
+                        .flex(1);
+                        .h(300);
+                        color: #fff;
+                        &:nth-child(2){
+                            .mgl(30);
+                            .mgr(30);
+                        }
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background:rgba(0,0,0,1);
+                            opacity:0.73;
+                            -webkit-transition: all 0.2s ease-in-out;
+                            transition: all 0.2s ease-in-out;
+                        }
+                        .detail{
+                            .flexbox();
+                            .flex-justify-wd(center);
+                            .align-items-wd(center);
+                            .flex-direction-vertical();
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            z-index: 1;
+                            .title{
+                                .fs(32);
+                                .pdb(20);
+                            }
+                            .desc{
+                                .fs(14);
+                                width: 80%;
+                                text-align: center;
+                            }
+                        }
+
+                        &:hover{
+                            cursor: pointer;
+                            &:before{
+                                opacity: .5;
+                            }
+                        }
+                    }
+
+                    .img1{
+                        .bg('/images/solutions/partner-1.png', cover);
+                    }
+                    .img2{
+                        .bg('/images/solutions/partner-2.png', cover);
+                    }
+                    .img3{
+                        .bg('/images/solutions/partner-3.png', cover);
+                    }
+                    .img4{
+                        .bg('/images/solutions/partner-4.png', cover);
+                    }
+                    .img5{
+                        .bg('/images/solutions/partner-5.png', cover);
+                    }
+                    .img6{
+                        .bg('/images/solutions/partner-6.png', cover);
+                    }
+
+                    &:not(first-child){
+                        .mgt(30);
+                    }
+                }
+            }
+        }
+    }
+}

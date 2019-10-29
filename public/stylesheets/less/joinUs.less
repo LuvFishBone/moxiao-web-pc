@@ -1,0 +1,182 @@
+@import "./base.less";
+.joinUs-page{
+    .banner{
+        .item{
+            img{
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+
+    .supports{
+        .pdt(80);
+        .content{
+            ul{
+                .flexbox();
+                .flex-direction-horizontal();
+                .flex-wrap-xd(wrap);
+                li{
+                    .mgr(24);
+                    .mgb(24);
+                    .pdrd(20,10);
+                    -webkit-box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+                    box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+                    .img{
+                        .w(254);
+                        .h(155);
+                    }
+                    .title{
+                        text-align: center;
+                        .pdt(30);
+                        .pdb(20);
+                        .fs(32);
+                    }
+                    .text{
+                        .w(254);
+                        .mgb(80);
+                        text-align: center;
+                        .fs(14);
+                    }
+
+                    .s1{
+                        .bg('../../images/joinUs/support-1.png', cover);
+                    }
+                    .s2{
+                        .bg('../../images/joinUs/support-2.png', cover);
+                    }
+                    .s3{
+                        .bg('../../images/joinUs/support-3.png', cover);
+                    }
+                    .s4{
+                        .bg('../../images/joinUs/support-4.png', cover);
+                    }
+                    .s5{
+                        .bg('../../images/joinUs/support-5.png', cover);
+                    }
+                    .s6{
+                        .bg('../../images/joinUs/support-6.png', cover);
+                    }
+                    .s7{
+                        .bg('../../images/joinUs/support-7.png', cover);
+                    }
+                    .s8{
+                        .bg('../../images/joinUs/support-8.png', cover);
+                    }
+                }
+            }
+        }
+    }
+
+    .partner-box{
+        .mgt(40);
+        .h(476);
+        .bg('../../images/joinUs/heighLight-bg.png', cover);
+        .content{
+            .pdt(70);
+            .partials-title{
+                color: #fff;
+            }
+            .desc{
+                color: #fff;
+                &::before, &::after{
+                    border-color: #fff;
+                }
+            }
+            .list{
+                .pdt(30);
+                .flexbox();
+                .flex-direction-horizontal();
+                .flex-justify-wd(space-between);
+                .item{
+                    .flexbox();
+                    .flex-direction-vertical();
+                    .align-items-wd(center);
+                    .flex-justify-wd(center);
+                    .w(200);
+                    .h(200);
+                    border:1px solid rgba(255,255,255,1);
+                    border-radius:50%;
+                    .fs(32);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .advantages{
+        .pdt(80);
+        .content{
+            .pdt(40);
+            .flexbox();
+            .left{
+                .w(600);
+                .h(482);
+                .bg('../../images/joinUs/advantages-bg.png', cover);
+            }   
+            .right{
+                .pdt(46);
+                .pdl(66);
+                p{
+                    .fs(32);
+                    color: #666;
+                    .lh(50);
+                }
+            }
+        }
+    }
+
+    .cooperations{
+        .pdrd(80, 0);
+        .content{
+            .pdt(65);
+            .flexbox();
+            .left{
+                h2{
+                    .fs(32);
+                    .pdb(20);
+                }
+                p{
+                    .pdrd(8, 0);
+                    .fs(28);
+                    color: #666;
+                }
+            }
+            .right{
+                form{
+                    .item{
+                        .w(350);
+                        .pdb(16);
+                        input[type=text]{
+                            width: 100%;
+                            .h(40);
+                            .lh(40);
+                            .fs(14);
+                            .pd(5);
+                            border:1px solid rgba(204,204,204,1);
+                        }
+                        textarea{
+                            .w(350);
+                            .h(100);
+                            .pd(5);
+                            .fs(14);
+                        }
+                        .label{
+                            .fs(14);
+                            color: #666;
+                        }
+                        .submit{
+                            .fs(16);
+                            .w(84);
+                            .h(34);
+                            border:0;
+                            border:none;
+                            color: #fff;
+                            background:rgba(53,119,196,1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

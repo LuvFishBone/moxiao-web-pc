@@ -1,0 +1,90 @@
+@import "./mixin.less";
+@pxUnit: 200;
+.rem(@name,@px){
+    @{name} : unit(@px / @pxUnit, rem);
+}
+
+.fs(@px) {
+    font-size: unit(@px / @pxUnit, rem);
+  }
+  
+  /*----- 宽度 -----*/
+  .w(@px) {
+    width: unit(@px / @pxUnit, rem);
+  }
+  
+  /*----- 高度 -----*/
+  .h(@px) {
+    height: unit(@px / @pxUnit, rem);
+  }
+  
+  /*----- 行高 -----*/
+  .lh(@px) {
+    line-height: unit(@px / @pxUnit, rem);
+  }
+  
+  /*----- 背景尺寸 -----*/
+  .b_s(@px, @px) {
+    -webkit-background-size: unit(@px / @pxUnit, rem) unit(@px / @pxUnit, rem);
+    background-size: unit(@px / @pxUnit, rem) unit(@px / @pxUnit, rem);
+  }
+  /**
+  * [背景尺寸，设置宽度，高度auto]
+   */
+  .b_s1(@px) {
+    -webkit-background-size: unit(@px / @pxUnit, rem) auto;
+    background-size: unit(@px / @pxUnit, rem) auto;
+  }
+  
+  .b_s2(@px) {
+    -webkit-background-size: auto unit(@px / @pxUnit, rem);
+    background-size: auto unit(@px / @pxUnit, rem);
+  }
+  /*background*/
+  .bg(@url, @bs){
+      background: url(@url) no-repeat center;
+      background-size: @bs;
+  }
+  
+  /*----- margin -----*/
+.mg(@px){
+    margin: unit(@px / @pxUnit, rem);
+}
+.mgt(@px) {
+    margin-top: unit(@px / @pxUnit, rem);
+}
+.mgr(@px) {
+    margin-right: unit(@px / @pxUnit, rem);
+}
+.mgb(@px) {
+    margin-bottom: unit(@px / @pxUnit, rem);
+}
+.mgl(@px) {
+    margin-left: unit(@px / @pxUnit, rem);
+}
+.mgrd(@top-bottom, @left-right){
+  margin: unit(@top-bottom / @pxUnit, rem) unit(@left-right / @pxUnit, rem);
+}
+
+  /*----- padding -----*/
+.pd(@px){
+    padding: unit(@px / @pxUnit, rem);
+}
+.pdr(@top, @right, @bottom, @left){
+    padding: unit(@top / @pxUnit, rem) unit(@right / @pxUnit, rem) unit(@bottom / @pxUnit, rem) unit(@px / @left, rem);
+}
+.pdrd(@top-bottom, @left-right){
+    padding: unit(@top-bottom / @pxUnit, rem) unit(@left-right / @pxUnit, rem);
+}
+.pdt(@px) {
+    padding-top: unit(@px / @pxUnit, rem);
+}
+.pdr(@px) {
+    padding-right: unit(@px / @pxUnit, rem);
+}
+.pdb(@px) {
+    padding-bottom: unit(@px / @pxUnit, rem);
+}
+.pdl(@px) {
+    padding-left: unit(@px / @pxUnit, rem);
+}

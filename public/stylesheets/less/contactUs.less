@@ -1,0 +1,240 @@
+@import "./base.less";
+.contactUs-page{
+    .banner{
+        .item{
+            img{
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+
+    .about-us{
+        .pdt(80);
+        .pdb(80);
+        .content{
+            .part-1{
+                .pdt(60);
+                .flexbox();
+                .align-items-wd(center);
+                .left{
+                    .w(600);
+                    .h(243);
+                    .bg('../../images/contactUs/about-us-1.png', cover);
+                }
+                .right{
+                    .flexbox();
+                    .flex-direction-vertical();
+                    .align-items-wd(center);
+                    .flex-justify-wd(center);
+                    .w(600);
+                    .h(372);
+                    text-align: center;
+                    // .pdrd(78, 52);
+                    color: #fff;
+                    background: #3577C4;
+                    .title{
+                        .fs(28);
+                    }
+                    .desc{
+                        text-align: center;
+                        .w(496);
+                        .pdt(20);
+                        text-align: left;
+                        .fs(14);
+                        .lh(30);
+                    }
+                }
+            }   
+            .part-2{
+                .pdt(70);
+                .flexbox();
+                .align-items-wd(center);
+                .left{
+                    position: relative;
+                    .w(600);
+                    .h(400);
+                    background: #F5F5F5;
+                    .img{
+                        .w(594);
+                        .h(398);
+                        position: absolute;
+                        .rem(top, 20);
+                        .rem(left, 20);
+                        .bg('../../images/contactUs/about-us-2.png', cover);
+                    }
+                }
+                .right{
+                    .flexbox();
+                    .flex-direction-vertical();
+                    // .align-items-wd(center);
+                    .flex-justify-wd(center);
+                    .pdl(100);
+                    .w(500);
+                    .h(372);
+                    // .pdrd(78, 52);
+                    color: #666;
+                    .title{
+                        .fs(28);
+                    }
+                    .desc{
+                        .w(496);
+                        .pdt(20);
+                        text-align: left;
+                        .fs(14);
+                        .lh(30);
+                    }
+                }
+            }
+        }
+    }
+
+    .development-path{
+        .content{
+            .mgt(40);
+            width: 100%;
+            .h(386);
+            .bg('../../images/contactUs/deve-path.png', cover);
+            .content-box{
+                height: 100%;
+                .flexbox();
+                .left{ 
+                    .w(600);
+                }
+                .right{
+                    .w(600);
+                    .flexbox();
+                    .flex-justify-wd(center);
+                    .align-items-wd(center);
+                    .steps{
+                        .flexbox();
+                        .flex-direction-vertical();
+                        align-self:center;
+                        color: #fff;
+                        .step1, .step2{
+                            h2{
+                                .fs(32);
+                                .mgb(10);
+                            }
+                            p{
+                                .fs(16);
+                                .lh(30);
+                            }
+                        }
+                        .step2{
+                            .mgt(20);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .service-philosophy{
+        .pdrd(80, 0);
+        background: #F5F5F5;
+        .content{
+            .pdt(40);
+            .flexbox();
+            .flex-direction-horizontal();
+            .flex-wrap-xd(wrap);
+            .item{
+                .w(400);
+                .h(240);
+                -webkit-box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+                box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+            }
+            .desc{
+                .flexbox();
+                .flex-direction-vertical();
+                .flex-justify-wd(center);
+                .align-items-wd(center);
+                h2{
+                    .fs(24);
+                }
+                .text{
+                    .w(336);
+                    .pdt(15);
+                    .fs(14);
+                    color: #666;
+                }
+                background: #fff;
+            }
+            .services1-img{
+                .bg('../../images/contactUs/service-1.png', cover);
+            }
+            .services2-img{
+                .bg('../../images/contactUs/service-2.png', cover);
+            }
+            .services3-img{
+                .bg('../../images/contactUs/service-3.png', cover);
+            }
+        }
+    }
+
+    .contact-us{
+        .pdrd(80, 0);
+        .content{
+            .pdt(40);
+            .flexbox();
+            .left{
+                .w(630);
+                .h(400);
+                background: #3577C4;
+            }
+            .right{
+                .flexbox();
+                .align-items-wd(center);
+                .address{
+                    .pdl(100);
+                    p{
+                        .fs(16);
+                        .lh(35);
+                    }
+                }
+            }
+        }
+    }
+
+    .major-partner-company{
+        .partners{
+            .pdt(40);
+            .pdb(114);
+            .partners-box{
+                .item{
+                    .flex-direction-vertical();
+                    .align-items-wd(start);
+                    .flex-justify-wd(center);
+                    // .w(388);
+                    .h(220);
+                    .mg(10);
+                    background:rgba(245,245,245,1);
+                    -webkit-box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+                    box-shadow:0px 3px 6px rgba(0,0,0,0.16);
+                    cursor: pointer;
+                    // &:nth-child(2){
+                    //     .mgl(18);
+                    //     .mgr(18);
+                    // }
+                    .name{
+                        .pdl(30);
+                        text-align: left;
+                        .fs(26);
+                        font-weight:400;
+                    }
+                    .detail{
+                        .pdl(30);
+                        text-align: left;
+                        .mgt(20);
+                        p{
+                            .fs(14);
+                            .lh(30);
+                            color: #666;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

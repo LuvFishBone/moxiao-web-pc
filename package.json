@@ -1,0 +1,33 @@
+{
+  "name": "moxiao",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "babel-node ./bin/www",
+    "dev": "nodemon ./bin/www --exec babel-node"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-fileupload": "^1.1.6-alpha.5",
+    "express-jwt": "^5.3.1",
+    "helmet": "^3.21.1",
+    "http-errors": "^1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "less-middleware": "^3.1.0",
+    "md5": "^2.2.1",
+    "morgan": "~1.9.1",
+    "mysql": "^2.17.1",
+    "request": "^2.88.0",
+    "thenify-all": "^1.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  }
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <%- include('../../frontEndPartials/header', {title: title}) %>
+    <meta name="description" content="墨小数据,墨小科技,墨小协议支付,聚合支付,大额支付, 聚合签约、聚合扣款,协议签约、协议扣款,大额签约、大额扣款,智能分期扣款，智能分次扣款,智能补单，墨小数据信贷产业全周期解决方案。" />
+    <link rel="stylesheet" href="/stylesheets/less/articleDetail.css">
+  </head>
+  <body>
+      <%- include('../../frontEndPartials/headerTop') %>
+      <%- include('../../frontEndPartials/headerNav', { menuName: 'news' }) %>
+      <div class="article-detail">
+        <div class="content mw1200">
+          <div class="new-nav"><a href="/news">新闻中心</a> >新闻详情</div>
+          <div class="article-content">
+            <div class="header-info">
+              <h1><%= articleDetail.title %></h1>
+              <div class="time-views">
+                <span>时间：<%= formatDt(articleDetail.createTime).detailDate  %></span>
+                <span>浏览量：<%= articleDetail.views || 100 %></span>
+              </div>
+            </div>
+            <div class="news-details">
+                <%- articleDetail.content %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%- include('../../frontEndPartials/footerNav') %>
+      <%- include('../../frontEndPartials/footer') %>
+  </body>
+</html>

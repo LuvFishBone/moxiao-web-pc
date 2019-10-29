@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <%- include('../../frontEndPartials/header', {title: title}) %>
+    <meta name="description" content="墨小数据,墨小科技,墨小协议支付,聚合支付,大额支付, 聚合签约、聚合扣款,协议签约、协议扣款,大额签约、大额扣款,智能分期扣款，智能分次扣款,智能补单，墨小数据信贷产业全周期解决方案。" />
+    <link rel="stylesheet" href="/stylesheets/less/joinUs.css">
+  </head>
+  <body>
+      <%- include('../../frontEndPartials/headerTop') %>
+      <%- include('../../frontEndPartials/headerNav',  { menuName: 'joinUs' }) %>
+      <div class="joinUs-page">
+          <div class="banner">
+            <div class="item"><img src="/images/joinUs/banner-1.png"></div>
+          </div>
+          <div class="supports">
+              <%- include('../../frontEndPartials/partialsTitle', { title: '合伙人八大支持', desc: 'Partner\'s Eight Support' }) %>
+              <div class="content mw1200">
+                <ul>
+                  <li>
+                    <div class="img s1"></div>
+                    <div class="title">品牌授权</div>
+                    <div class="text">快速提升合伙人地方影响力</div>
+                  </li>
+                  <li>
+                    <div class="img s2"></div>
+                    <div class="title">信息系统</div>
+                    <div class="text">提供线上CRM管理系统</div>
+                  </li>
+                  <li>
+                    <div class="img s3"></div>
+                    <div class="title">业务培训</div>
+                    <div class="text">专业化的业务开展培训支持</div>
+                  </li>
+                  <li>
+                    <div class="img s4"></div>
+                    <div class="title">技术支持</div>
+                    <div class="text">专业团队强大的研发能力</div>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <div class="img s5"></div>
+                    <div class="title">运营支持</div>
+                    <div class="text">VIP模式一站式售后服务</div>
+                  </li>
+                  <li>
+                    <div class="img s6"></div>
+                    <div class="title">产品支持</div>
+                    <div class="text">定期更新持续发布优秀新产品</div>
+                  </li>
+                  <li>
+                    <div class="img s7"></div>
+                    <div class="title">资源支持</div>
+                    <div class="text">战略合作提升运营商市场竞争力</div>
+                  </li>
+                  <li>
+                    <div class="img s8"></div>
+                    <div class="title">政策支持</div>
+                    <div class="text">完成年度目标享受高额返利</div>
+                  </li>
+                </ul>
+              </div>
+          </div>
+          <div class="partner-box">
+            <div class="content mw1200">
+                <%- include('../../frontEndPartials/partialsTitle', { title: '合伙人四大亮点', desc: 'Four Highlights Of Partners' }) %>
+                <div class="list">
+                  <div class="item">
+                    <div class="index">01</div>
+                    <div class="title">市场需求</div>
+                  </div>
+                  <div class="item">
+                    <div class="index">02</div>
+                    <div class="title">长期分润</div>
+                  </div>
+                  <div class="item">
+                    <div class="index">03</div>
+                    <div class="title">转化率高</div>
+                  </div>
+                  <div class="item">
+                    <div class="index">04</div>
+                    <div class="title">资源共享</div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="advantages">
+              <%- include('../../frontEndPartials/partialsTitle', { title: '合伙人六大优势', desc: 'Six Advantages Of Partners' }) %>
+              <div class="content mw1200">
+                <div class="left"></div>
+                <div class="right">
+                  <p>1.投资小风险低  利润回报快</p>
+                  <p>2.系统简单易操作</p>
+                  <p>3.专业一站式服务团队</p>
+                  <p>4.盈利模式清晰</p>
+                  <p>5.独家区域保护</p>
+                  <p>6.费率透明，产品多样化</p>
+                </div>
+              </div>
+          </div>
+          <div class="cooperations">
+              <%- include('../../frontEndPartials/partialsTitle', { title: '申请合作', desc: 'Apply For Cooperation' }) %>
+              <div class="content mw1200">
+                <div class="left">
+                  <h2>合作资格</h2>
+                  <p>1. 具备一定金融机构资源的社会团体或个人；</p>
+                  <p>2. 具备市场开拓能力；</p>
+                  <p>3. 具备商务谈判能力；</p>
+                  <p>4. 具备举办活动的组织协调能力。</p>
+                </div>
+                <div class="right">
+                  <form>
+                    <div class="item">
+                      <div class="label">联系人</div>
+                      <div><input type="text" placeholder="联系人" /></div>
+                    </div>
+                    <div class="item">
+                      <div class="label">联系电话</div>
+                      <div><input type="text" placeholder="联系电话" /></div>
+                    </div>
+                    <div class="item">
+                      <div class="label">地址</div>
+                      <div><input type="text" placeholder="地址" /></div>
+                    </div>
+                    <div class="item">
+                      <div class="label">留言</div>
+                      <div><textarea placeholder="写入一些信息……"></textarea></div>
+                    </div>
+                    <div class="item">
+                      <button class="submit" type="submit">提交</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+      </div>
+      <%- include('../../frontEndPartials/productCooperations') %>
+      <%- include('../../frontEndPartials/knowMore') %>
+      <%- include('../../frontEndPartials/footerNav') %>
+      <%- include('../../frontEndPartials/footer') %>
+  </body>
+</html>

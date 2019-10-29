@@ -1,0 +1,18 @@
+<div class="header-nav mw1200">
+    <a class="logo" href="/home">上海墨小数据科技有限公司（Shanghai Moxiao Data Technology Co., Ltd.）</a>
+    <div class="menu" id="headerNav">
+        <a data-name="home" href="/">首页</a>
+        <a data-name="products" href="/products">产品介绍</a>
+        <a data-name="solution" href="/solution">解决方案</a>
+        <a data-name="news" href="/news">新闻中心</a>
+        <a data-name="joinUs" href="/joinUs">合作加盟</a>
+        <a data-name="contactUs" href="/contactUs">联系我们</a>
+    </div>
+</div>
+<script>
+    var headerNav = $('#headerNav');
+    var menuName =   "<%=menuName%>";
+    headerNav.find('a').attr('data-name', function(index, oldvalue) {
+        if (oldvalue === menuName) $(this).addClass('on');
+    });
+</script>

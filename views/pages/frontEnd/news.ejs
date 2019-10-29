@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <%- include('../../frontEndPartials/header', {title: title}) %>
+    <meta name="description" content="墨小数据,墨小科技,墨小协议支付,聚合支付,大额支付, 聚合签约、聚合扣款,协议签约、协议扣款,大额签约、大额扣款,智能分期扣款，智能分次扣款,智能补单，墨小数据信贷产业全周期解决方案。" />
+    <link rel="stylesheet" href="/stylesheets/less/news.css">
+    <link rel="stylesheet" header="/stylesheets/less/jquery-pagination.css">
+  </head>
+  <body>
+      <%- include('../../frontEndPartials/headerTop') %>
+      <%- include('../../frontEndPartials/headerNav',  { menuName: 'news' }) %>
+      <div class="news-page">
+        <div class="banner">
+          <div class="item"><img src="/images/news/banner-1.png"></div>
+        </div>
+        <div class="news-center">
+            <%- include('../../frontEndPartials/partialsTitle', { title: '新闻中心', desc: 'News Center' }) %>
+            <div class="news-list mw1200">
+              <div class="news-img" id="news-img"><img alt="文章缩略图" src=""></div>
+              <div class="list">
+                <ul id="new-list">
+                  <% newsList.forEach(function(item){ %>
+                    <li thumbUrl=<%= item.thumbUrl %>>
+                      <a href="/articleDetail/<%= item.id %>">
+                        <div class="date-box">
+                          <div class="day"><%= formatDt(item.createTime).newsDate.md %></div>
+                          <div class="year"><%= formatDt(item.createTime).newsDate.year %></div>
+                        </div>
+                        <div class="article-desc">
+                          <div class="title"><%= item.title %></div>
+                          <div class="desc"><%= item.intro %></div>
+                        </div>
+                      </a>
+                    </li>
+                  <% }) %>
+                </ul>
+                <div class="row">
+                  <div class="page-container"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <%- include('../../frontEndPartials/productCooperations') %>
+      <%- include('../../frontEndPartials/knowMore') %>
+      <%- include('../../frontEndPartials/footerNav') %>
+      <%- include('../../frontEndPartials/footer') %>
+      <script src="/javascripts/jquery-pagination.js"></script>
+      <script>
+        $(document).ready(function(){
+          var $newsList = $('#new-list');
+          var $newImg = $('#news-img');
+          var $firstLi = $newsList.find('li').first();
+          $firstLi.find('a').addClass('on');
+          $newImg.find('img').attr('src', $firstLi.attr('thumbUrl'));
+          $newsList.find('li').hover(function() {
+            var thumbUrl = $(this).attr('thumbUrl');
+            $(this).find('a').addClass('on').end().siblings().find('a').removeClass('on');
+            //console.log(decodeURIComponent(thumbUrl), 'decodeURIComponent');
+            //$newImg.css('background-image', 'url(\''+ thumbUrl +'\')').css('background-size', 'cover');
+            $newImg.find('img').attr('src', thumbUrl);
+          });
+        });
+      </script>
+  </body>
+</html>

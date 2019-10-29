@@ -1,0 +1,102 @@
+@import "./base.less";
+.news-page{
+    .banner{
+        .item{
+            img{
+                display: inline-block;
+                width: 100%;
+            }
+        }
+    }
+
+    .news-center{
+        .pdt(80);
+        .news-list{
+            .pdt(40);
+            .pdb(80);
+            .flexbox();
+            .news-img{
+                .w(540);
+                .h(400);
+                // .bg('/images/news/article-1-img.png', cover);
+                img{
+                    display: inline-block;
+                    width: 100%;
+                    border: none;
+                }
+            }
+            .list{
+                .flex(1);
+                .pdl(40);
+                ul{
+                    li{
+                        a{
+                            position: relative;
+                            .pdrd(22, 16);
+                            border:1px solid rgba(112,112,112,1);
+                            .mgb(8);
+                            .flexbox();
+                            .date-box{
+                                .pdr(14);
+                                text-align: center;
+                                border-right: 1px solid #707070;
+                                .day{
+                                    .fs(18);
+                                }
+                                .year{
+                                    .fs(14);
+                                }
+    
+                            }
+                            .article-desc{
+                                .pdl(20);
+                                .overh{
+                                    .w(380);
+                                    text-overflow:ellipsis;
+                                    overflow:hidden;
+                                    white-space:nowrap;
+                                }
+                                .title{
+                                    .overh();
+                                    .fs(18);
+                                }
+                                .desc{
+                                    // .rem(max-width, 420);
+                                    .overh();
+                                    .w(380);
+                                    .fs(14);
+                                    color: #666;
+                                }
+                            }
+                            &.on{
+                                background-color: #3577C4;
+                                color: #fff;
+                                .date-box{
+                                    border-right-color: #fff;
+                                }
+                                .article-desc{
+                                    .desc{
+                                        color: #fff;
+                                    }
+                                }
+                                &:before{
+                                    content: '';
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-5px);
+                                    left: -20px;
+                                    width:0;
+                                    height:0;
+                                    border-top:10px solid transparent;
+                                    border-bottom:10px solid transparent;
+                                    border-right:20px solid #3577C4;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,239 @@
+@import "./base.less";
+.home-page{
+    .products{
+        .pdrd(80, 0);
+        .products-dess{
+            .pdt(40);
+            li{
+                .flexbox();
+                .item{
+                    // .w(600);
+                    // .h(320);
+                    .flex(1);
+                    text-align: center;
+                    img{
+                        width: 100%;
+                    }
+                    .title{
+                        .pdb(25);
+                        .fs(28);
+                        font-weight:400;
+                    }
+                    .line{
+                        .flexbox();
+                        .flex-justify-wd(center);
+                        width: 100%;
+                        height: 1px;
+                        span{
+                            display: inline-block;
+                            .w(60);
+                            height:0;
+                            border:1px solid rgba(112,112,112,1);
+                        }
+                    }
+                    .text{
+                        .mgt(20);
+                        .mgb(30);
+                        .fs(18);
+                        font-weight:400;
+                        color:rgba(96,96,96,1);
+                    }
+                    .link{
+                        display: inline-block;
+                        .pdrd(9, 27);
+                        border:1px solid rgba(181,181,181,1);
+                        border-radius:10px;
+                        .fs(12);
+                        color:rgba(96,96,96,1);
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .desc{
+                    .pdt(60);
+                    .pdb(94);
+                    text-align: center;
+                    background:rgba(245,245,245,1);
+                }
+            }
+            .product-1{
+                .img{
+                    .bg('/images/home/pro-des-1.png', cover);
+                }
+            }
+            .product-2{
+                .img{
+                    .bg('/images/home/pro-des-2.png', cover);
+                }
+            }
+            .product-3{
+                .img{
+                    .bg('/images/home/pro-des-3.png', cover);
+                }
+            }
+        }
+    }
+
+    .about-agreement{
+        .content{
+            .rem(min-height, 520);
+            .mgt(40);
+            position: relative;
+            background:rgba(245,245,245,1);
+            .blue-bg{
+                .h(260);
+                background:rgba(53,119,196,1);
+            }
+            .detail{
+                position: absolute;
+                left: 0;
+                right: 0;
+                background: #fff;
+                -webkit-box-shadow:10px 10px 16px rgba(0,0,0,0.16);
+                box-shadow:10px 10px 16px rgba(0,0,0,0.16);
+                .rem(top, 80);
+                .pdb(34);
+                .flexbox();
+                .left{
+                    .flex(1);
+                    .pdt(114);
+                    .pdl(60);
+                    .pdr(60);
+                    .title{
+                        .fs(16);
+                        font-weight:bold;
+                        .lh(21);
+                    }
+                    .desc{
+                        .fs(16);
+                        .pdt(30);
+                        .pdb(40);
+                        .w(392);
+                    }
+                    .btn{
+                        .pdrd(9, 27);
+                        border:1px solid rgba(181,181,181,1);
+                        border-radius:10px;
+                        .fs(12);
+                        font-weight:400;
+                        color:rgba(96,96,96,1);
+                    }
+                }
+                .right{
+                    .w(688);
+                    .h(406);
+                    .bg('/images/home/about-arg-payment.png', cover);
+                }
+            }
+        }
+    }
+
+    .products-advantage{
+        .pdt(80);
+        .adv-list{
+            .pdt(40);
+            .pdb(50);
+            .flexbox();
+            .flex-direction-horizontal();
+            .flex-wrap-xd(wrap);
+            .item{
+                position: relative;
+                .w(380);
+                .h(300);
+                .mgr(30);
+                .mgb(30);
+                background: blue;
+                .flexbox();
+                .flex-justify-wd(center);
+                .align-items-wd(center);
+                &:nth-child(3n+3) {
+                    margin-right: 0;
+                }
+                &:before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background:rgba(0,0,0,1);
+                    opacity: .73;
+                    -webkit-transition: all 0.2s ease-in-out;
+                    transition: all 0.2s ease-in-out;
+                }
+                .content{
+                    position: absolute;
+                    z-index: 1;
+                    .flexbox();
+                    .flex-direction-vertical();
+                    .align-items-wd(center);
+                    .img{
+                        .w(100);
+                        .h(100);
+                    }
+                    .desc{
+                        .pdt(18);
+                        .fs(24);
+                        font-weight:400;
+                        color: #fff;
+                    }
+                }
+                &:hover{
+                    cursor: pointer;
+                    &:before{
+                        opacity: .5;
+                    }
+                }
+            }
+            .adv-1{
+                .bg('/images/home/pro-adv-bg-1.png', cover);
+                .content{
+                    .img{
+                        .bg('/images/home/pro-adv-1.png', cover);
+                    }
+                }
+            }
+            .adv-2{
+                .bg('/images/home/pro-adv-bg-2.png', cover);
+                .content{
+                    .img{
+                        .bg('/images/home/pro-adv-2.png', cover);
+                    }
+                }
+            }
+            .adv-3{
+                .bg('/images/home/pro-adv-bg-3.png', cover);
+                .content{
+                    .img{
+                        .bg('/images/home/pro-adv-3.png', cover);
+                    }
+                }
+            }
+            .adv-4{
+                .bg('/images/home/pro-adv-bg-4.png', cover);
+                .content{
+                    .img{
+                        .bg('/images/home/pro-adv-4.png', cover);
+                    }
+                }
+            }
+            .adv-5{
+                .bg('/images/home/pro-adv-bg-5.png', cover);
+                .content{
+                    .img{
+                        .bg('/images/home/pro-adv-5.png', cover);
+                    }
+                }
+            }
+            .adv-6{
+                .bg('/images/home/pro-adv-bg-6.png', cover);
+                .content{
+                    .img{
+                        .bg('/images/home/pro-adv-6.png', cover);
+                    }
+                }
+            }
+        }
+    }
+}
