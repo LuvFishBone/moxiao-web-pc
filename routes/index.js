@@ -20,6 +20,7 @@ import metas from './backEnd/metas';
 import userApi from './API/user';
 import articleApi from './API/article';
 import partnersApi from './API/partners';
+import cooperationsApi from './API/cooperations';
 // import uploadApi from './API/upload';
 // import tokenApi from './API/token';
 
@@ -30,6 +31,7 @@ const routes = function (app) {
   app.use(api, userApi);
   app.use(api, articleApi);
   app.use(api, partnersApi);
+  app.use(api, cooperationsApi);
   // app.use(api, uploadApi);
   // app.use(api, tokenApi);
 

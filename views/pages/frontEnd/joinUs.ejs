@@ -108,29 +108,65 @@
                   <p>3. 具备商务谈判能力；</p>
                   <p>4. 具备举办活动的组织协调能力。</p>
                 </div>
-                <div class="right">
-                  <form>
-                    <div class="item">
-                      <div class="label">联系人</div>
-                      <div><input type="text" placeholder="联系人" /></div>
-                    </div>
-                    <div class="item">
-                      <div class="label">联系电话</div>
-                      <div><input type="text" placeholder="联系电话" /></div>
-                    </div>
-                    <div class="item">
-                      <div class="label">地址</div>
-                      <div><input type="text" placeholder="地址" /></div>
-                    </div>
-                    <div class="item">
-                      <div class="label">留言</div>
-                      <div><textarea placeholder="写入一些信息……"></textarea></div>
-                    </div>
-                    <div class="item">
-                      <button class="submit" type="submit">提交</button>
-                    </div>
-                  </form>
+                <div id="cooperation" class="right">
+                  <div class="item">
+                    <div class="label">联系人</div>
+                    <div><input class="name" maxlength="60" type="text" placeholder="联系人" /></div>
+                  </div>
+                  <div class="item">
+                    <div class="label">联系电话</div>
+                    <div><input class="cellphone" maxlength="11" type="text" placeholder="联系电话" /></div>
+                  </div>
+                  <div class="item">
+                    <div class="label">地址</div>
+                    <div><input class="address" maxlength="100" type="text" placeholder="地址" /></div>
+                  </div>
+                  <div class="item">
+                    <div class="label">留言</div>
+                    <div><textarea class="msg" maxlength="200" placeholder="写入一些信息……"></textarea></div>
+                  </div>
+                  <div class="item">
+                    <button id="submit" class="submit" type="submit">提交</button>
+                  </div>
                 </div>
+                <script>
+                  $(document).ready(function(){
+                    var $co = $('#cooperation');
+                    var $submit = $('#submit');
+                    $submit.click(function(){
+                      var name = $co.find('.name').val();
+                      var cellphone = $co.find('.cellphone').val();
+                      var address = $co.find('.address').val();
+                      var msg = $co.find('.msg').val();
+                      if (name === '') {
+                        alert('请输入联系人');
+                        return;
+                      } else if (cellphone === '') {
+                        alert('请输入联系电话');
+                        return;
+                      } else if (!/^1[3|4|5|6|7|8|9]\d{9}$/.test(cellphone)) {
+                        alert('请输入正确的联系电话');
+                        return;
+                      } else if (address === '') {
+                        alert('请输入联系地址');
+                        return;
+                      } 
+                      submitInfo(name, cellphone, address, msg);
+                    });
+
+                    function submitInfo(name, cellphone, address, msg) {
+                      API.post('/api/cooperation/add', { name: name, cellphone: cellphone, address: address, msg: msg  }, function(res) {
+                        if (res.code === 0) {
+                          alert('提交成功！');
+                          location.reload();
+                        }
+                        else {
+                          alert(res.msg);
+                        } 
+                      })
+                    }
+                  });
+                </script>
               </div>
           </div>
       </div>
@@ -138,5 +174,6 @@
       <%- include('../../frontEndPartials/knowMore') %>
       <%- include('../../frontEndPartials/footerNav') %>
       <%- include('../../frontEndPartials/footer') %>
+      <script src="/javascripts/ajax-common.js?version=1.0"></script>
   </body>
 </html>

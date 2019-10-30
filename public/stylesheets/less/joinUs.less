@@ -143,36 +143,39 @@
                 }
             }
             .right{
-                form{
-                    .item{
+                .item{
+                    .w(350);
+                    .pdb(16);
+                    input[type=text]{
+                        width: 100%;
+                        .h(40);
+                        .lh(40);
+                        .fs(14);
+                        .pd(5);
+                        border:1px solid rgba(204,204,204,1);
+                    }
+                    textarea{
                         .w(350);
-                        .pdb(16);
-                        input[type=text]{
-                            width: 100%;
-                            .h(40);
-                            .lh(40);
-                            .fs(14);
-                            .pd(5);
-                            border:1px solid rgba(204,204,204,1);
-                        }
-                        textarea{
-                            .w(350);
-                            .h(100);
-                            .pd(5);
-                            .fs(14);
-                        }
-                        .label{
-                            .fs(14);
-                            color: #666;
-                        }
-                        .submit{
-                            .fs(16);
-                            .w(84);
-                            .h(34);
-                            border:0;
-                            border:none;
-                            color: #fff;
-                            background:rgba(53,119,196,1);
+                        .h(100);
+                        .pd(5);
+                        .fs(14);
+                    }
+                    .label{
+                        .fs(14);
+                        color: #666;
+                    }
+                    .submit{
+                        .fs(16);
+                        .w(84);
+                        .h(34);
+                        cursor: pointer;
+                        border:0;
+                        border:none;
+                        color: #fff;
+                        background:rgba(53,119,196,1);
+                        transition: all .3s ease-in-out;
+                        &:hover{
+                            background:#1968c3;
                         }
                     }
                 }

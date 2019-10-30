@@ -57,7 +57,7 @@
         var titVal = $('#title');
         var descVal = $('#desc');
         var thumbUrl = $('#thumbUrl');
-        var articleContent = '<%- content %>';
+        var articleContent = '<%- content.replace(/[\r\n]/g,"") %>';
         var content = '';
 
         $("#thumbForm").ajaxForm(function(data){
