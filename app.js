@@ -67,5 +67,5 @@ app.locals.formatDt = function(dtString) {
   }
 }
 
-// module.exports = app;
-export default app;
+module.exports = app;
+// export default app;

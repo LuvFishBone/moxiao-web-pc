@@ -3,9 +3,10 @@
 /**
  * Module dependencies.
  */
-
-import app from '../app';
-import http from 'http';
+require('babel-register');
+require('babel-polyfill');
+var app = require('../app');
+var http = require('http');
 var debug = require('debug')('moxiao:server');
 
 /**
