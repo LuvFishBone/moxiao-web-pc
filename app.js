@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(helmet());
 app.use(compression()); // Compress all routes
 
-app.use(lessMiddleware(path.join(__dirname, 'public')));
+app.use(lessMiddleware(path.join(__dirname, 'public/stylesheets/less')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use(express.static(path.join(__dirname, 'ueidtor')));
